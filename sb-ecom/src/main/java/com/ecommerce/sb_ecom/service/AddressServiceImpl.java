@@ -49,7 +49,7 @@ public class AddressServiceImpl implements AddressService{
         List<Address> allAddresses = addressRepository.findAll();
 
        List<AddressDTO> addressDTOS =  allAddresses.stream()
-                .map(address -> modelMapper.map(allAddresses, AddressDTO.class))
+                .map(address -> modelMapper.map(address, AddressDTO.class))
                 .toList();
        return addressDTOS;
 
