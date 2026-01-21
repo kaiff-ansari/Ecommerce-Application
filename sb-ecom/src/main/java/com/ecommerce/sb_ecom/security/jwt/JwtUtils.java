@@ -32,19 +32,19 @@ public class JwtUtils {
     private String jwtCookie;
 
 
-//    public String getHeaderFromJwt(HttpServletRequest request){
-//
-//
-//
-//            String bearerToken = request.getHeader("Authorization");
-//            log.debug("Authorization Header: {}",bearerToken);
-//
-//            if (bearerToken != null && bearerToken.startsWith("Bearer")){
-//
-//               return bearerToken.substring(7);
-//            }
-//        return null;
-//    }
+    public String getHeaderFromJwt(HttpServletRequest request){
+
+
+
+            String bearerToken = request.getHeader("Authorization");
+            log.debug("Authorization Header: {}",bearerToken);
+
+            if (bearerToken != null && bearerToken.startsWith("Bearer")){
+
+               return bearerToken.substring(7);
+            }
+        return null;
+    }
 
     public String getJwtFromCookies(HttpServletRequest request){
 
